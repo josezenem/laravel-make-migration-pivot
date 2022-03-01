@@ -34,7 +34,7 @@ return new class extends Migration {
 You can install the package via composer:
 
 ```bash
-composer require josezenem/laravel-make-migration-pivot
+composer require josezenem/laravel-make-migration-pivot --dev
 ```
 
 ## Usage
