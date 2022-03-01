@@ -43,7 +43,7 @@ composer require josezenem/laravel-make-migration-pivot
 php artisan make:pivot Category Blog
 ```
 
-Optionally, you can publish the views using
+Optionally, you can publish the stubs using
 
 ```bash
 php artisan vendor:publish --tag="laravel-make-migration-pivot-stubs"
