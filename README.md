@@ -1,0 +1,1 @@
+# laravel-make-migration-pivot
