@@ -1,0 +1,70 @@
+{
+    "name": "josezenem/laravel-make-migration-pivot",
+    "description": "Make Laravel pivot tables using the new Laravel 9 closure migrations.",
+    "keywords": [
+        "josezenem",
+        "laravel",
+        "laravel-make-pivot",
+        "migration pivot",
+        "laravel migrations"
+    ],
+    "homepage": "https://github.com/josezenem/laravel-make-migration-pivot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jose Jimenez",
+            "email": "jose@jimenez.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "illuminate/contracts": "^9.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Josezenem\\LaravelMakeMigrationPivot\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Josezenem\\LaravelMakeMigrationPivot\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Josezenem\\LaravelMakeMigrationPivot\\LaravelMakeMigrationPivotServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMakeMigrationPivot": "Josezenem\\LaravelMakeMigrationPivot\\Facades\\LaravelMakeMigrationPivot"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
