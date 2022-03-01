@@ -2,9 +2,9 @@
 
 namespace Josezenem\LaravelMakeMigrationPivot;
 
+use Josezenem\LaravelMakeMigrationPivot\Commands\LaravelMakeMigrationPivotCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Josezenem\LaravelMakeMigrationPivot\Commands\LaravelMakeMigrationPivotCommand;
 
 class LaravelMakeMigrationPivotServiceProvider extends PackageServiceProvider
 {

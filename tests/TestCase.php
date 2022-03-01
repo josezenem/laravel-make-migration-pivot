@@ -2,9 +2,8 @@
 
 namespace Josezenem\LaravelMakeMigrationPivot\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Josezenem\LaravelMakeMigrationPivot\LaravelMakeMigrationPivotServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
