@@ -54,7 +54,7 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
                 '{{ first_model_path }}' => $first_model,
                 '{{ second_model_path }}' => $second_model,
             ];
-            
+
             $migration_file = $this->getMigrationFile($table);
             if (File::exists($migration_file)) {
                 $this->error(sprintf("Migration exists: **_create_category_%s_pivot_table.php", $table));
