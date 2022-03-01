@@ -5,7 +5,3 @@ All notable changes to `laravel-make-migration-pivot` will be documented in this
 ## 1.0.0 - 2022-03-01
 
 - Initial Release
-
-## 1.0.0 - 202X-XX-XX
-
-- initial release
