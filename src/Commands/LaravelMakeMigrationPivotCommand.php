@@ -21,11 +21,13 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
             $firstModel = $this->qualifyModel($this->argument('firstModel'));
             $secondModel = $this->qualifyModel($this->argument('secondModel'));
 
-            $first_table = \Str::singular((new $firstModel())->getTable());
-            $second_table = \Str::singular((new $secondModel())->getTable());
+
+            $first_table = str((new $firstModel())->getTable())->singular()->value();
+            $second_table = str((new $secondModel())->getTable())->singular()->value();
 
             $models[$first_table] = $firstModel;
             $models[$second_table] = $secondModel;
+
             ksort($models);
 
             $table = $this->option('table') ?? implode('_', array_keys($models));
@@ -44,8 +46,8 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
 
             $replacements = [
                 '{{ table }}' => $table,
-                '{{ first_model_name }}' => \Str::afterLast($first_model, '\\'),
-                '{{ second_model_name }}' => \Str::afterLast($second_model, '\\'),
+                '{{ first_model_name }}' => str($first_model)->afterLast('\\')->value(),
+                '{{ second_model_name }}' => str($second_model)->afterLast('\\')->value(),
                 '{{ first_table_id }}' => (new $first_model())->getKeyName(),
                 '{{ first_table_foreign_id }}' => (new $first_model())->getForeignKey(),
                 '{{ second_table_id }}' => (new $second_model())->getKeyName(),
@@ -62,7 +64,7 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
                 return self::FAILURE;
             }
 
-            $this->line("<info>Created Migration:</info> " . \Str::afterLast($migration_file, '/'));
+            $this->line("<info>Created Migration:</info> " . str($migration_file)->afterLast('/')->value());
             $this->makeMigration($migration_file, $replacements);
         }
 
