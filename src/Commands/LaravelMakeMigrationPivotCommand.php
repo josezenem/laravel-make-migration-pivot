@@ -11,6 +11,7 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
     public $signature = 'make:pivot
                             {firstModel?}
                             {secondModel?}
+                            {--p|pivot= : Generate a Pivot Model}
                             {--table= : Hard code the table to migrate}';
 
     public $description = 'Create a new migration pivot class';
