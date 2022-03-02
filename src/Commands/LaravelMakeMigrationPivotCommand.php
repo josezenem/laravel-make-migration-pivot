@@ -15,7 +15,7 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
 
     public $description = 'Create a new migration pivot class';
 
-    public function handle(): int
+    public function handle(): bool|int|null
     {
         if ($this->argument('firstModel') && $this->argument('secondModel')) {
             $firstModel = $this->qualifyModel($this->argument('firstModel'));
