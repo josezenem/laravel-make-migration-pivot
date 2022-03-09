@@ -12,11 +12,6 @@ php artisan make:pivot Category Blog
 Will generate the following migration
 ```php
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('blog_category', function (Blueprint $table) {
