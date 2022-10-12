@@ -5,14 +5,12 @@
 return new class extends Migration {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
-        Schema::create('{{ table }}', function (Blueprint $table) {
-            $table->foreignIdFor({{ first_model_name }}::class)->constrained()->onDelete('cascade');
-            $table->foreignIdFor({{ second_model_name }}::class)->constrained()->onDelete('cascade');
+        Schema::create('{{ table }}', static function (Blueprint $table): void {
+            $table->foreignIdFor({{ first_model_name }}::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor({{ second_model_name }}::class)->constrained()->cascadeOnDelete();
             $table->primary(['{{ first_table_foreign_id }}', '{{ second_table_foreign_id }}']);
 
             $table->index('{{ first_table_foreign_id }}');
@@ -22,10 +20,8 @@ return new class extends Migration {
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('{{ table }}');
     }
