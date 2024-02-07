@@ -1,7 +1,7 @@
 # Make Laravel Pivot Tables using the new Laravel 9 closure migration format
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/josezenem/laravel-make-migration-pivot.svg?style=flat-square)](https://packagist.org/packages/josezenem/laravel-make-migration-pivot)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/josezenem/laravel-make-migration-pivot/Check%20&%20fix%20styling?label=code%20style)](https://github.com/josezenem/laravel-make-migration-pivot/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Check & fix styling](https://github.com/josezenem/laravel-make-migration-pivot/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/josezenem/laravel-make-migration-pivot/actions/workflows/php-cs-fixer.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/josezenem/laravel-make-migration-pivot.svg?style=flat-square)](https://packagist.org/packages/josezenem/laravel-make-migration-pivot)
 
 This will allow you to create pivot table migration files using the new Laravel 9 closure migration format by simply passing two models.  Under the hood the system will inspect the two models to generate the pivot table and foreign key names. 
