@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-make-migration-pivot` will be documented in this file.
 
+## 1.2.0 - 2024-03-12
+
+- Updated to Laravel 11
+
 ## 1.0.1 - 2022-10-12
 
 - Improved stub #5
