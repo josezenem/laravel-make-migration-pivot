@@ -4,10 +4,12 @@ namespace Josezenem\LaravelMakeMigrationPivot\Commands;
 
 use File;
 use Illuminate\Console\GeneratorCommand;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Spatie\LaravelPackageTools\Concerns\PackageServiceProvider\ProcessMigrations;
 
 class LaravelMakeMigrationPivotCommand extends GeneratorCommand
 {
+    use ProcessMigrations;
+
     public $signature = 'make:pivot
                             {firstModel?}
                             {secondModel?}
@@ -82,7 +84,7 @@ class LaravelMakeMigrationPivotCommand extends GeneratorCommand
 
     protected function getMigrationFile($table)
     {
-        return PackageServiceProvider::generateMigrationName('create_'. $table . '_pivot_table', now());
+        return $this->generateMigrationName('create_'. $table . '_pivot_table', now());
     }
 
     protected function getStub()
