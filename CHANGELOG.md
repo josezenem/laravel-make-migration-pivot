@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-make-migration-pivot` will be documented in this file.
 
+## 1.3.2 - 2025-05-16
+
+- Updated composer dependencies
+
 ## 1.3.1 - 2025-04-26
 
 - Including the trait ProcessMigrations so that we can still leverage protected generateMigrationName within our package
